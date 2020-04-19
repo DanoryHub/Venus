@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend.Dockerfile
+    restart: 'no'
+    command: gunicorn -b 0.0.0.0:8000 -w=2 wsgi:app
+    volumes:
+      - blob:/media/files
+    ports:
+      - 8000:8000
+
+volumes:
+  blob:
