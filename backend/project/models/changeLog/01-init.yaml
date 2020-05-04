@@ -1,0 +1,15 @@
+databaseChangeLog:
+- changeSet:
+    id: 1
+    author: Ivan Miatselski
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+              primaryKeyName: comment_pkey
+            name: test_id
+            type: SERIAL
+        tableName: test
