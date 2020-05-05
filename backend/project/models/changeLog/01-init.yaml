@@ -10,6 +10,18 @@ databaseChangeLog:
             constraints:
               primaryKey: true
               primaryKeyName: comment_pkey
-            name: test_id
+            name: id
             type: SERIAL
-        tableName: test
+        - column:
+            name: name
+            type: VARCHAR
+        - column:
+            name: blob_path
+            type: VARCHAR
+        - column:
+            name: color
+            type: VARCHAR
+        - column:
+            name: cloth_type
+            type: VARCHAR
+        tableName: clothes
