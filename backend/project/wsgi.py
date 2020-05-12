@@ -14,6 +14,7 @@ def create_db_connection(app):
     DB_URL = f'postgresql://{POSTGRES_USER}:{POSTGRES_PW}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}'
 
     app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
+    app.config['SQLALCHEMY_ECHO'] = True
 
     SQLAlchemy(app)
 
